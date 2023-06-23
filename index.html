@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Forex Exchange Rate </title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1> Forex Exchange Rates </h1>
-        
-        <table id="ratesTable">
-            <thead>
-                <tr>
-                    <th> Currency Pair </th>
-                    <th> Exchange Rate </th>
-                </tr>
-            </thead>
-            <tbody>
+  <head>
+    <title>Forex Exchange Rate</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Forex Exchange Rates</h1>
 
-            </tbody>
-        </table>
+    <div class="container">
+      <input type="text" id="currencyPairInput" placeholder="Enter currency pair (e.g., EURUSD)">
+      <button id="addPairButton">Add Pair</button>
+    </div>
 
-        <script src="script.js"></script>
-    </body>
+    <table id="ratesTable">
+      <thead>
+        <tr>
+          <th>Currency Pair</th>
+          <th>Exchange Rate</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
 </html>
