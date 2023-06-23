@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     function fetchData() {
-        fetch('https://www.freeforexapi.com/api/live?pairs=EURUSD,EURGBP,GBPUSD,USDJPY,AUDUSD,USDCHF,NZDUSD,USDCAD,USDZAR')
+        fetch('http://localhost:3000/api/rates')
             .then(response => response.json())
-            .then(data => { 
-                const rates = data.rates;
-                const tableBody = document.querySelector('#ratesTable tbody');
+            .then(data => {
+                const rates = data;
 
+                const tableBody = document.querySelector('#ratesTable tbody');
                 for (const pair in rates) {
                     const row = document.createElement('tr');
                     const pairCell = document.createElement('td');
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => {
                 console.error('Error:', error);
             });
-    }  
+    }
 
     fetchData();
 });
