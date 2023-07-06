@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Forex Exchange Rate</title>
+    <title>FX Tracker</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <h1>Forex Exchange Rates</h1>
 
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+
     <div class="container">
       <input type="text" id="currencyPairInput" placeholder="Enter currency pair (e.g., EURUSD)">
       <button id="addPairButton">Add Pair</button>
     </div>
+
+    <div id="errorMessage" style="display: none;"></div>
 
     <table id="ratesTable">
       <thead>
@@ -19,8 +23,8 @@
           <th>Exchange Rate</th>
         </tr>
       </thead>
-      <tbody></tbody>
-    </table>
+      <tbody id="tableBody"></tbody>
+    </table>    
     <a href="https://www.freeforexapi.com">
       <img alt="Free Forex API" src="https://www.freeforexapi.com/Images/link.png" height="20">
     </a>
