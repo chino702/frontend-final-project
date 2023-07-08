@@ -57,6 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
           errorMessage.textContent = error;
           errorMessage.style.display = 'block';
+          setTimeout(() => {
+            errorMessage.textContent = '';
+            errorMessage.style.display = 'none';
+          }, 3000); // Set the timeout duration (in milliseconds)
         });
     }
   });
