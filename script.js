@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const row = document.createElement('tr');
     const pairCell = document.createElement('td');
     const rateCell = document.createElement('td');
+    const removeButton = document.createElement('button');
     
     pairCell.textContent = currencyPair;
     rateCell.textContent = rate;
@@ -91,11 +92,28 @@ document.addEventListener('DOMContentLoaded', () => {
     image.alt = currencyPair;
     image.classList.add('currency-image');
     pairCell.prepend(image);
+
+    removeButton.textContent = "Remove";
+    removeButton.addEventListener('click', () => {
+      removePair(currencyPair);
+    });
   
     row.appendChild(pairCell);
     row.appendChild(rateCell);
-    
+    row.appendChild(removeButton);
+
     tableBody.appendChild(row);
+  }
+
+  function removePair(currencyPair) {
+    //removes the pair from the user's view.
+    const pairRows = document.querySelectorAll('#ratesTable tbody tr ');
+    pairRows.forEach (row => {
+      const pairCell = row.querySelector("td:first-child");
+      if (pairCell.textContent === currencyPair) {
+        row.style.display = 'none';
+      }
+    });
   }
     
   fetchData();
