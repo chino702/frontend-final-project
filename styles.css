@@ -129,3 +129,30 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* General button styles */
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #28A745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style the dark mode toggle button */
+#darkModeToggle {
+  background-color: #333;
+}
+
+/* Style the add pair button */
+#addPairButton {
+  background-color: #28A745;
+}
+
+/* Add hover effect */
+button:hover {
+  background-color: #0f461c;
+}
