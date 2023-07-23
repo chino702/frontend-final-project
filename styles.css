@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  border: 5px solid #333; 
+  border: 5px solid #333;
 }
 
 .wrapper {
@@ -13,8 +13,10 @@ body {
 
 h1 {
   text-align: center;
+  color: #555;
 }
 
+/* Input Styles */
 .input-container {
   display: flex;
   align-items: center;
@@ -24,27 +26,43 @@ h1 {
 
 .input-container label {
   font-weight: bold;
+  color: #555;
 }
 
+#currencyPairInput {
+  padding: 10px;
+  width: 75px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+
+/* Currency Box Styles */
 .currency-box {
   width: 200px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
+  background-color: #f9f9f9;
 }
 
 .currency-image {
   width: 100px;
   height: 100px;
   margin: 0 auto 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 
 .exchange-rate {
   font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
+  color: #555;
 }
 
+/* Table Styles */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -55,6 +73,7 @@ td {
   padding: 10px;
   border-bottom: 1px solid #ccc;
   text-align: center;
+  color: #555;
 }
 
 th:nth-child(1),
@@ -63,24 +82,18 @@ td:nth-child(1) {
 }
 
 #ratesTable {
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
-.currency-image {
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-
+/* Error Message Styles */
 .error-message {
   color: rgba(255, 0, 0, 0.688);
   margin-top: 10px;
 }
 
+/* Dark Mode Styles */
 .dark-mode {
-  background-color: #111;
+  background-color: #121111;
   color: #fff;
 }
 
@@ -88,35 +101,93 @@ td:nth-child(1) {
   color: #fff;
 }
 
-.dark-mode .container {
-  background-color: #222;
+.dark-mode .input-container label {
+  color: #ccc;
+}
+
+.dark-mode #currencyPairInput {
+  background-color: #fff;
+  color: #fff;
+  border: 1px solid #555;
 }
 
 .dark-mode .currency-box {
-  border-color: #888;
+  border-color: #555;
   color: #fff;
+  background-color: #222;
 }
 
-.dark-mode table {
-  border-color: #888;
+.dark-mode .exchange-rate {
+  color: #ccc;
 }
 
 .dark-mode th,
 .dark-mode td {
-  border-color: #888;
-  color: #fff;
+  border-color: #555;
+  color: #ccc;
 }
 
+/* Button Styles */
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #ec0e0e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+  background-color: #555;
+}
+
+#darkModeToggle:hover {
+  background-color: #292929;
+}
+
+/* Add Pair Button */
+#addPairButton {
+  background-color: #28A745;
+}
+
+#addPairButton:hover {
+  background-color: #176128;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #840b0b;
+}
+
+/* API Link Styles */
 .api-link {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.api-link img {
-  margin-left: 5px;
+.api-link a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #555;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
+.api-link a:hover {
+  background-color: #444;
+}
+
+.api-link img {
+  margin-right: 5px;
+}
+
+/* Footer Styles */
 footer {
   text-align: center;
   margin-top: 40px;
@@ -128,31 +199,4 @@ footer {
 
 footer p {
   margin: 0;
-}
-
-/* General button styles */
-button {
-  font-size: 16px;
-  padding: 10px 20px;
-  background-color: #28A745;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Style the dark mode toggle button */
-#darkModeToggle {
-  background-color: #333;
-}
-
-/* Style the add pair button */
-#addPairButton {
-  background-color: #28A745;
-}
-
-/* Add hover effect */
-button:hover {
-  background-color: #0f461c;
 }
