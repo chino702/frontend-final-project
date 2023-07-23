@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => response.json())
       .then(data => {
         const rates = data;
-
+  
         const tableBody = document.querySelector('#ratesTable tbody');
         tableBody.innerHTML = '';
 
-        for (const pair in rates) {
+        Object.keys(rates).forEach(pair => {
           updateTable(pair, rates[pair].rate);
-        }
+        });
       })
       .catch(error => {
         console.error('Error:', error);
